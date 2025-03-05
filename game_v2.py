@@ -1,6 +1,5 @@
 import numpy as np
 
-
 def random_predict(number: int = 1) -> int:
     """Рандомно угадываем число
 
@@ -12,8 +11,8 @@ def random_predict(number: int = 1) -> int:
     """
 
     count = 0
-    low_num = 1
-    high_num = 100
+    low_num = low_border
+    high_num = high_border-1
 
     while True:
         count += 1
@@ -27,7 +26,7 @@ def random_predict(number: int = 1) -> int:
             break  # выход из цикла, если угадали
     return count
 
-
+low_border, high_border = 1, 100001
 def score_game(random_predict) -> int:
     """За какое количество попыток в среднем из 1000 подходов угадывает наш алгоритм
 
@@ -37,10 +36,10 @@ def score_game(random_predict) -> int:
     Returns:
         int: среднее количество попыток
     """
-
+    
     count_ls = []  # список для сохранения количества попыток
     np.random.seed(1)  # фиксируем сид для воспроизводимости
-    random_array = np.random.randint(1, 101, size=(10))  # загадали список чисел
+    random_array = np.random.randint(low_border, high_border, size=(1000))  # загадали список чисел
 
     for number in random_array:
         count_ls.append(random_predict(number))
@@ -50,7 +49,6 @@ def score_game(random_predict) -> int:
     print(f"Ваш алгоритм угадывает число в среднем за: {score} попыток")
     return score
 
-
+if __name__ == '__main__':
 # RUN
-#if __name__ == '__main__':
-score_game(random_predict)
+    score_game(random_predict) 
