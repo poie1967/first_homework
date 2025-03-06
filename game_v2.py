@@ -10,15 +10,20 @@ def random_predict(number: int = 1) -> int:
         int: Число попыток N
     """
 
-    count = 0
+    count = 0 # устанавливаем счётчик попыток в 0
+    # приравниваем текущие верхние и нижние границы к заданным для случайного числа
     low_num = low_border
     high_num = high_border-1
 
     while True:
         count += 1
-        predict_number = np.random.randint(low_num, high_num)  # предполагаемое число        
+        predict_number = np.random.randint(low_num, high_num)  # предполагаемое число  
+        # если загаданное число меньше предполагаемого, устанавливаем верхнюю границу
+        # равную предполагаемому
         if number < predict_number:
             high_num = predict_number
+        # если загаданное число больше предполагаемого, устанавливаем нижнюю границу
+        # равную предполагаемому
         elif number > predict_number:
             low_num = predict_number        
         else:
@@ -26,7 +31,7 @@ def random_predict(number: int = 1) -> int:
             break  # выход из цикла, если угадали
     return count
 
-low_border, high_border = 1, 100001
+low_border, high_border = 1, 100001 # Задаём границы для случайного числа
 def score_game(random_predict) -> int:
     """За какое количество попыток в среднем из 1000 подходов угадывает наш алгоритм
 
