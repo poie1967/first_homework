@@ -14,7 +14,7 @@ def random_predict(number: int = 1) -> int:
     count = 0  # устанавливаем счётчик попыток в 0
     # приравниваем текущие верхние и нижние границы к заданным для случайного числа
     low_num = low_border
-    high_num = high_border - 1
+    high_num = high_border
 
     while True:
         count += 1
