@@ -33,7 +33,7 @@ def random_predict(number: int = 1) -> int:
     return count
 
 
-low_border, high_border = 1, 10000001  # Задаём границы для случайного числа
+low_border, high_border = 1, 101  # Задаём границы для случайного числа
 
 
 def score_game(random_predict) -> int:
@@ -49,7 +49,7 @@ def score_game(random_predict) -> int:
     count_ls = []  # список для сохранения количества попыток
     np.random.seed(1)  # фиксируем сид для воспроизводимости
     random_array = np.random.randint(
-        low_border, high_border, size=(10000)
+        low_border, high_border, size=(1000)
     )  # загадали список чисел
 
     for number in random_array:
