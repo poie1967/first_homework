@@ -1,7 +1,7 @@
 # Проект 1 Угадай читсло быстрее
 
 ## Оглавление
-[1. Описание проекта] (https://github.com/poie1967/first_homework/README.md#Описание-проекта)
+[1. Описание проекта](https://github.com/poie1967/first_homework/blob/main/README.md#Описание-проекта)
 
 
 
@@ -11,4 +11,4 @@
 
 ### Описание проекта
 Проект по созданию программы, которая угадывает загаданное компьютером число за минимальное количество попыток.
-:arrow_up: [к оглавлению] (https://github.com/poie1967/first_homework/README.md#Оглавление)
+:arrow_up: [к оглавлению](https:github.com/poie1967/first_homework/blob/main/README.md#Оглавление)
