@@ -33,7 +33,7 @@ def random_predict(number: int = 1) -> int:
     return count
 
 
-low_border, high_border = 1, 1000001  # Задаём границы для случайного числа
+low_border, high_border = 1, 10000001  # Задаём границы для случайного числа
 
 
 def score_game(random_predict) -> int:
